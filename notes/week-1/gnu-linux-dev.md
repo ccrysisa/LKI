@@ -11,8 +11,6 @@ export_on_save:
   html: true
 ---
 
-[TOC]
-
 # GNU/Linux 开发工具
 
 ## 安装 Windows / Ubuntu 双系统

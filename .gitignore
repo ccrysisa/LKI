@@ -1,0 +1,6 @@
+notes/*/*.html
+
+tests/*.o
+tests/*.o.*
+tests/*.out
+tests/test-stopwatch

@@ -25,19 +25,27 @@
       <div class="crossnote markdown-preview  ">
       
 <h1 id="gnulinux-开发工具">GNU/Linux 开发工具 </h1>
+<p><a href="https://hackmd.io/@sysprog/gnu-linux-dev/">原文地址</a></p>
 <h2 id="安装-windows--ubuntu-双系统">安装 Windows / Ubuntu 双系统 </h2>
 <p>因为有些操作必须在物理硬件上才能执行。</p>
 <h2 id="markdown-文本标记语言">Markdown 文本标记语言 </h2>
-<p>速览 LateX 语法示例一节，作为工具书册，在需要使用时知道如何查询。</p>
+<p>速览 LaTeX 语法示例一节，作为工具书册，在需要使用时知道如何查询。</p>
 <p>速览 Markdown 语法示例一节，作为工具书册，在需要使用时知道如何查询。</p>
 <h2 id="git-和-github">Git 和 Github </h2>
-<p>速览 SSH key 产生方法一节，作为工具书册，在需要使用时知道如何查询。</p>
+<p>阅读 SSH key 产生方法一节，配置好 Git 和 Github 的 SSH key。同时也可作为工具书册，在需要使用时知道如何查询。</p>
 <p><mark><em><strong>墙裂推荐通过 <a href="https://learngitbranching.js.org/">LearnGitBranching</a> 来熟悉 Git 命令！！！</strong></em></mark></p>
 <p>以下资源作为自学资源，用于补充自己不熟悉的操作，或者作为以上资料的补充工具手册。</p>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLlyOkSAh6TwcvJQ1UtvkSwhZWCaM_S07d">Git 中文教学（视频）</a></li>
 <li><a href="https://github.com/doggy8088/Learn-Git-in-30-days">30 天精通 Git 版本控制（文本）</a></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>原文档中的将公钥复制到 clipboard 中使用了 <code>clip</code> 命令，但是这个命令在 Ubuntu 中并没有对应的命令。可以使用 <code>xclip</code> 达到近似效果。</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>$ <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> xclip
+ <span class="token comment"># using alias to implement clip, you can add this to bashrc</span>
+ $ <span class="token assign-left variable">alias</span><span class="token operator">=</span><span class="token string">'xclip -sel c'</span>
+</code></pre></div>
 <h2 id="visual-studio-code">Visual Studio Code </h2>
 <p>认真阅读，跟随教学文档进行安装、设置。重点阅读 <em><strong>设定、除错（调试）</strong></em> 这两部分。</p>
 <p>以下资源作为自学资源，用于补充自己不熟悉的操作，或者作为以上资料的补充工具手册。</p>
@@ -46,17 +54,42 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>原文档中的 <strong>GDB 教学链接：除错程式：gdb</strong> 已失效，其目前的有效链接为 <a href="https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php">https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php</a></p>
-<p>也可通过该影片 <a href="https://www.youtube.com/watch?v=IttSz0BYZ8o">拯救资工系学生的基本素养-使用 GDB 除错基本教学</a> 来补充学习 GDB 的操作。</p>
+<p>在 VS Code 设置中，需要在设置中打开 <strong>Open Default Settings</strong> 选项才能在左侧面板观察到预设值。键位绑定同理。</p>
+<hr>
+<p>要想进行调试，需要在使用 gcc 生成目标文件时，加入 <code>-g</code> 参数来生产调试信息。</p>
+<hr>
+<p>原文档中的 <strong>GDB 教学链接-除错程式-gdb</strong> 已失效，其目前的有效链接为 <a href="https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php">https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php</a>。也可通过该影片 <a href="https://www.youtube.com/watch?v=IttSz0BYZ8o">拯救资工系学生的基本素养-使用 GDB 除错基本教学</a> 来补充学习 GDB 的操作。</p>
 </div>
 <h2 id="终端和-vim">终端和 Vim </h2>
-<p>认真阅读，跟随教学文档配置好 <em><strong>终端提示符、Vim</strong></em>。</p>
+<p>认真阅读，跟随教学影片 <mark><a href="https://youtu.be/Y3Libi0SEp8">快快乐乐学 Vim</a></mark> 和教学文档配置好 <em><strong>终端提示符、Vim</strong></em>。</p>
+<p>Vim 插件使用说明：</p>
+<ul>
+<li>在 .vimrc 中增加插件后，打开 vim，执行 <code>:PlugInstall</code> 来安装插件，完成后在终端执行 <code>source ~/.vimrc</code>。</li>
+<li>使用 <code>F5</code> 键来[显示/不显示][行数/相对行数]。</li>
+<li>使用 <code>TAB</code> 键来呼出文件树(nerdtree)，在文件树恻通过 <code>ENTER</code> 键来访问目录/文件。</li>
+<li>使用 <code>C-w-h</code>/<code>C-w-l</code> 切换到 文件树/编辑区。</li>
+<li>自动补全时使用 <code>ENTER</code> 键来选中，使用方向键或 <code>C-N</code>/<code>C-U</code>/<code>C-P</code> 来上下选择。</li>
+</ul>
 <p><mark><em><strong>墙裂推荐观看音影片 <a href="https://www.youtube.com/watch?v=XA2WjJbmmoM&amp;list=WL">How to Do 90% of What Plugins Do (With Just Vim)</a> 来扩展 Vim 插件的使用姿势。</strong></em></mark></p>
 <p>以下资源为 Cheat Sheet，需要使用时回来参考即可。</p>
 <ul>
 <li><a href="https://hackmd.io/@sysprog/gnu-linux-dev/https%3A%2F%2Fvim.rtorr.com%2F">Vim Cheat Sheet</a></li>
 <li><a href="https://hackmd.io/@sysprog/gnu-linux-dev/https%3A%2F%2Fkapeli.com%2Fcheat_sheets%2FBash_Shortcuts.docset%2FContents%2FResources%2FDocuments%2Findex">Bash terminal Cheat Sheet</a></li>
 </ul>
+<h2 id="makefile">Makefile </h2>
+<p>速览教学文档，作为工具书册，在需要使用时知道如何查询。</p>
+<p>gcc 的 <code>-MMD</code> 和 <code>-MF</code> 参数对我们编写 Makefile 是一个巨大利器。理解 Makefile 的各种变量定义的原理。</p>
+<hr>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>完成 <a href="#git-%E5%92%8C-github"># Git 和 Github</a> 一节的 SSH key 生成。</p>
+<hr>
+<p>完成 <a href="#visual-studio-code"># VS Code</a> 一节的设置、Git History、Debug(<a href="../../tests/test-stopwatch.c">test-stopwatch.c</a>) 等操作。</p>
+<hr>
+<p>完成 <a href="#%E7%BB%88%E7%AB%AF%E5%92%8C-vim"># 终端和 Vim</a> 一节的命令行提示符配置，Vim 的设定、使用 Minial VIm Plugin Manager 来管理 Vim 插件(neocomplcache, nerdtree)、使用 byobu 来管理多个终端试图。</p>
+<hr>
+<p>根据 <a href="#makefile"># Makefile</a> 一节的内容，对之前的 test-stopwatch.c 编写了一个 <a href="../../tests/Makefile">Makefile</a> 来自动化管理。</p>
+</div>
 
       </div>
       <div class="md-sidebar-toc">
@@ -86,6 +119,10 @@
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#终端和-vim" class="md-toc-link">
             <p>终端和 Vim</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#makefile" class="md-toc-link">
+            <p>Makefile</p>
 
           </a></div>
         </div>

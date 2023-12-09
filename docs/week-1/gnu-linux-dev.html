@@ -31,6 +31,7 @@
 <h2 id="markdown-文本标记语言">Markdown 文本标记语言 </h2>
 <p>速览 LaTeX 语法示例一节，作为工具书册，在需要使用时知道如何查询。</p>
 <p>速览 Markdown 语法示例一节，作为工具书册，在需要使用时知道如何查询。</p>
+<p><mark><em><strong>墙裂推荐使用 VS Code + Markdown Preview Enhanced 来编写 Markdown 文本以及 LaTeX 语法表示的数学式。</strong></em></mark></p>
 <h2 id="git-和-github">Git 和 Github </h2>
 <p>阅读 SSH key 产生方法一节，配置好 Git 和 Github 的 SSH key。同时也可作为工具书册，在需要使用时知道如何查询。</p>
 <p><mark><em><strong>墙裂推荐通过 <a href="https://learngitbranching.js.org/">LearnGitBranching</a> 来熟悉 Git 命令！！！</strong></em></mark></p>
@@ -47,18 +48,20 @@
  $ <span class="token assign-left variable">alias</span><span class="token operator">=</span><span class="token string">'xclip -sel c'</span>
 </code></pre></div>
 <h2 id="visual-studio-code">Visual Studio Code </h2>
-<p>认真阅读，跟随教学文档进行安装、设置。重点阅读 <em><strong>设定、除错（调试）</strong></em> 这两部分。</p>
+<p>认真阅读，跟随教学文档进行安装、设置。重点阅读 <em><strong>设定、除错（调试）</strong></em> 这两部分。更新 VS Code 部分作为手册，在需要时进行参考。</p>
 <p>以下资源作为自学资源，用于补充自己不熟悉的操作，或者作为以上资料的补充工具手册。</p>
 <ul>
-<li><a href="https://www.youtube.com/playlist?list=PL6S9AqLQkFpph4LOfSjtD-s4WB3pNh5M3">开开心心学 Vistual Studio Code</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL6S9AqLQkFpph4LOfSjtD-s4WB3pNh5M3">开开心心学 Vistual Studio Code</a> 🆗</li>
 </ul>
+<p>可以在面板的输出，点击 GIT 选项显示 VS Code 背后执行的 git 命令。<br>
+可以使用 <code>ctrl + shift + P</code> 呼出命令区，然后通过输入 Git branch 和 Git checkout 等并选择对应选项，来达到创建分支、切换分支等功能。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>在 VS Code 设置中，需要在设置中打开 <strong>Open Default Settings</strong> 选项才能在左侧面板观察到预设值。键位绑定同理。</p>
 <hr>
 <p>要想进行调试，需要在使用 gcc 生成目标文件时，加入 <code>-g</code> 参数来生产调试信息。</p>
 <hr>
-<p>原文档中的 <strong>GDB 教学链接-除错程式-gdb</strong> 已失效，其目前的有效链接为 <a href="https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php">https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php</a>。也可通过该影片 <a href="https://www.youtube.com/watch?v=IttSz0BYZ8o">拯救资工系学生的基本素养-使用 GDB 除错基本教学</a> 来补充学习 GDB 的操作。</p>
+<p>原文档中的 <strong>GDB 教学链接-除错程式-gdb</strong> 已失效，其目前的有效链接为 <a href="https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php">https://frdm.cyut.edu.tw/~ckhung/b/c/gdb.php</a>。也可通过该影片 <a href="https://www.youtube.com/watch?v=IttSz0BYZ8o">拯救资工系学生的基本素养-使用 GDB 除错基本教学</a> 🆗 来补充学习 GDB 的操作。</p>
 </div>
 <h2 id="终端和-vim">终端和 Vim </h2>
 <p>认真阅读，跟随教学影片 <mark><a href="https://youtu.be/Y3Libi0SEp8">快快乐乐学 Vim</a></mark> 和教学文档配置好 <em><strong>终端提示符、Vim</strong></em>。</p>
@@ -70,7 +73,7 @@
 <li>使用 <code>C-w-h</code>/<code>C-w-l</code> 切换到 文件树/编辑区。</li>
 <li>自动补全时使用 <code>ENTER</code> 键来选中，使用方向键或 <code>C-N</code>/<code>C-U</code>/<code>C-P</code> 来上下选择。</li>
 </ul>
-<p><mark><em><strong>墙裂推荐观看音影片 <a href="https://www.youtube.com/watch?v=XA2WjJbmmoM&amp;list=WL">How to Do 90% of What Plugins Do (With Just Vim)</a> 来扩展 Vim 插件的使用姿势。</strong></em></mark></p>
+<p><mark><em><strong>墙裂推荐观看影片 <a href="https://www.youtube.com/watch?v=XA2WjJbmmoM&amp;list=WL">How to Do 90% of What Plugins Do (With Just Vim)</a> 来扩展 Vim 插件的使用姿势。</strong></em></mark></p>
 <p>以下资源为 Cheat Sheet，需要使用时回来参考即可。</p>
 <ul>
 <li><a href="https://hackmd.io/@sysprog/gnu-linux-dev/https%3A%2F%2Fvim.rtorr.com%2F">Vim Cheat Sheet</a></li>
@@ -80,16 +83,16 @@
 <p>速览教学文档，作为工具书册，在需要使用时知道如何查询。</p>
 <p>gcc 的 <code>-MMD</code> 和 <code>-MF</code> 参数对我们编写 Makefile 是一个巨大利器。理解 Makefile 的各种变量定义的原理。</p>
 <hr>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<h2 id="学习笔记">学习笔记 </h2>
 <p>完成 <a href="#git-%E5%92%8C-github"># Git 和 Github</a> 一节的 SSH key 生成。</p>
-<hr>
-<p>完成 <a href="#visual-studio-code"># VS Code</a> 一节的设置、Git History、Debug(<a href="../../tests/test-stopwatch.c">test-stopwatch.c</a>) 等操作。</p>
-<hr>
+<p>完成 <a href="#visual-studio-code"># VS Code</a> 一节的设置、Git History、Debug(<a href="https://github.com/LoongGshine/LKI/tests/test-stopwatch.c">test-stopwatch.c</a>) 等操作，安装 VSCode Great Icons 文件图标主题，另外推荐两款美观大气的颜色主题：One Dark Pro &amp; Learn with Sumit。</p>
 <p>完成 <a href="#%E7%BB%88%E7%AB%AF%E5%92%8C-vim"># 终端和 Vim</a> 一节的命令行提示符配置，Vim 的设定、使用 Minial VIm Plugin Manager 来管理 Vim 插件(neocomplcache, nerdtree)、使用 byobu 来管理多个终端试图。</p>
-<hr>
-<p>根据 <a href="#makefile"># Makefile</a> 一节的内容，对之前的 test-stopwatch.c 编写了一个 <a href="../../tests/Makefile">Makefile</a> 来自动化管理。</p>
-</div>
+<p>根据 <a href="#makefile"># Makefile</a> 一节的内容，对之前的 test-stopwatch.c 编写了一个 <a href="https://github.com/LoongGshine/LKI/tests/Makefile">Makefile</a> 来自动化管理。</p>
+<p>观看教学视频 <mark><a href="gdb-basics">拯救資工系學生的基本素養—使用 GDB 除錯基本教學</a></mark> 和搭配博文 <mark><a href="https://tigercosmos.xyz/post/2020/09/system/debug-gdb/">How to debug Rust/C/C++ via GDB</a></mark>，学习 GDB 的基本操作和熟悉使用 GDB 调试 Rust/C/C++ 程序。</p>
+<ul>
+<li>掌握 <code>run/r</code>, <code>break/b</code>, <code>print/p</code>, <code>continue/c</code>, <code>step/s</code> <code>info/i</code>, <code>delete/d</code>, <code>backtrace/bt</code>, <code>frame/f</code>, <code>up</code>/<code>down</code>, <code>exit/q</code> 等命令的用法。以及 GBD 的一些特性，例如 GDB 会将空白行的断点自动下移到下一代码行；使用 <code>break</code> 命令时可以输入源文件路径，也可以只输入源文件名称。</li>
+<li>相关的测试文件：<a href="https://github.com/LoongGshine/LKI/tests/test.c">test.c</a>, <a href="https://github.com/LoongGshine/LKI/tests/hello_cargo/src/main.rs">hello_cargo/src/main.rs</a></li>
+</ul>
 
       </div>
       <div class="md-sidebar-toc">
@@ -123,6 +126,10 @@
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#makefile" class="md-toc-link">
             <p>Makefile</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#学习笔记" class="md-toc-link">
+            <p>学习笔记</p>
 
           </a></div>
         </div>

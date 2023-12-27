@@ -33,6 +33,7 @@ export_on_save:
 
 ==***墙裂推荐通过 [LearnGitBranching][learn-git-branching] 来熟悉 Git 命令！！！***==
 
+
 以下资源作为自学资源，用于补充自己不熟悉的操作，或者作为以上资料的补充工具手册。
 
 - [Git 中文教学（视频）][git-tutorials-zh]
@@ -43,8 +44,8 @@ export_on_save:
 
     ```bash
     $ sudo apt install xclip
-     # using alias to implement clip, you can add this to bashrc
-     $ alias='xclip -sel c'
+    # using alias to implement clip, you can add this to bashrc
+    $ alias='xclip -sel c'
     ```
 
 ## Visual Studio Code
@@ -55,8 +56,12 @@ export_on_save:
 
 - [开开心心学 Vistual Studio Code][learn-vscode-happily] :ok:
 
-可以在面板的输出，点击 GIT 选项显示 VS Code 背后执行的 git 命令。
-可以使用 `ctrl + shift + P` 呼出命令区，然后通过输入 Git branch 和 Git checkout 等并选择对应选项，来达到创建分支、切换分支等功能。
+VS Code 控制台使用说明：
+
+- 可以在面板的输出，点击 GIT 选项显示 VS Code 背后执行的 git 命令。
+- 可以使用 `ctrl + shift + P` 呼出命令区，然后通过输入 Git branch 和 Git checkout 等并选择对应选项，来达到创建分支、切换分支等功能。
+- 
+
 
 
 !!! warning
@@ -71,7 +76,7 @@ export_on_save:
 认真阅读，跟随教学影片 ==[快快乐乐学 Vim][learn-vim-happily]== 和教学文档配置好 ***终端提示符、Vim***。
 
 Vim 插件使用说明：
-- 在 .vimrc 中增加插件后，打开 vim，执行 `:PlugInstall` 来安装插件，完成后在终端执行 `source ~/.vimrc`。
+- 在 .vimrc 中增加插件后，打开 vim，执行 `:PlugInstall` 来安装插件，完成后在 vim 执行 `:source ~/.vimrc`。（可以通过 `:PlugStatus` 来查看插件安装状态）
 - 使用 `F5` 键来[显示/不显示][行数/相对行数]。
 - 使用 `TAB` 键来呼出文件树(nerdtree)，在文件树恻通过 `ENTER` 键来访问目录/文件。
 - 使用 `C-w-h`/`C-w-l` 切换到 文件树/编辑区。
@@ -102,9 +107,36 @@ gcc 的 `-MMD` 和 `-MF` 参数对我们编写 Makefile 是一个巨大利器。
     
 根据 [# Makefile](#makefile) 一节的内容，对之前的 test-stopwatch.c 编写了一个 [Makefile](/tests/Makefile) 来自动化管理。
 
+### GDB 调试
+
 观看教学视频 ==[拯救資工系學生的基本素養—使用 GDB 除錯基本教學](gdb-basics)== 和搭配博文 ==[How to debug Rust/C/C++ via GDB][debug-gdb]==，学习 GDB 的基本操作和熟悉使用 GDB 调试 Rust/C/C++ 程序。
+
 - 掌握 `run/r`, `break/b`, `print/p`, `continue/c`, `step/s` `info/i`, `delete/d`, `backtrace/bt`, `frame/f`, `up`/`down`, `exit/q` 等命令的用法。以及 GBD 的一些特性，例如 GDB 会将空白行的断点自动下移到下一代码行；使用 `break` 命令时可以输入源文件路径，也可以只输入源文件名称。
+
 - 相关的测试文件：[test.c](/tests/test.c), [hello_cargo/src/main.rs](/tests/hello_cargo/src/main.rs) 
+
+### Git 版本控制
+
+观看教学视频 ==[Git 中文教学][git-tutorials-zh]== 学习 Git 操作。
+
+#### 1. 安裝與設定
+
+完成常用的 Git 设置（可以在通过 `vim ~/.gitconfig` 查看已经设置的内容）：
+
+```bash
+$ git config --global core.editor vim
+$ git config --global merge.tool vimdiff
+$ git config --global color.ui true 
+$ git config --global alias.st status
+$ git config --global alias.ch checkout
+$ git config --global alias.rst reset HEAD
+```
+
+#### 2. add 和 commit
+
+
+
+
 
 
 [source]: https://hackmd.io/@sysprog/gnu-linux-dev/

@@ -1,0 +1,7 @@
+*.o
+perf_top_example
+perf_top_while
+perf_stat_cache_miss
+perf_record_example
+*.data
+*.data.*

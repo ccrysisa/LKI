@@ -1,4 +1,9 @@
 *.o
 func
-ptr
+ptr*
+s
+a*
+put
+argv
 *tmp*
+

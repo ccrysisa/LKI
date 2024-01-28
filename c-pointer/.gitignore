@@ -5,5 +5,7 @@ s
 a*
 put
 argv
+char
+lvalue
 *tmp*
 

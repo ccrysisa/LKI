@@ -25,6 +25,12 @@ argv: argv.c
 put: put.c
 	gcc -o $@ -g $< -Wall
 
+char: char.c
+	gcc -o $@ $< -Wall
+
+lvalue: lvalue.c
+	gcc -o $@ $< -Wall
+
 .PHONY: clean
 clean:
-	rm -rf *.o func ptr ptr2 s a ap put *tmp*
+	rm -rf *.o func ptr ptr2 s a ap argv put char lvalue *tmp*

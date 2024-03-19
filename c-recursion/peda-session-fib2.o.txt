@@ -1,2 +1,0 @@
-break /home/cai/LKI/c-recursion/fib2.c:34
-
